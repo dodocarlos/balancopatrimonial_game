@@ -1,0 +1,59 @@
+unit FormPrincipal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ComCtrls;
+
+type
+  TForm1 = class(TForm)
+    lstCreditos: TListBox;
+    lstDebitos: TListBox;
+    lstGeral: TListBox;
+    procedure lstCreditosDragOver(Sender, Source: TObject; X, Y: Integer;
+      State: TDragState; var Accept: Boolean);
+    procedure lstDebitosDragDrop(Sender, Source: TObject; X, Y: Integer);
+    procedure FormCreate(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.FormCreate(Sender: TObject);
+begin
+  lstGeral.AddItem('Contas a pagar - R$1000', TObject(1000));
+  lstGeral.AddItem('Contas a receber - R$1000', TObject(1000));
+end;
+
+procedure TForm1.lstCreditosDragOver(Sender, Source: TObject; X, Y: Integer;
+  State: TDragState; var Accept: Boolean);
+var
+  lbSender, lbSoure : TListBox;
+begin
+  Accept := Sender <> Source;
+end;
+
+procedure TForm1.lstDebitosDragDrop(Sender, Source: TObject; X, Y: Integer);
+var
+  lbSender, lbSoure : TListBox;
+begin
+  lbSender := TListBox(Sender);
+  lbSoure  := TListBox(Source);
+
+  ShowMessage(IntToStr(Integer(lbSoure.Items.Objects[lbSoure.ItemIndex])));
+
+  lbSender.Items.Add(lbSoure.Items[lbSoure.ItemIndex]);
+  lbSender.Items.AddObject(lbSoure.Items[lbSoure.ItemIndex], lbSoure.Items.Objects[lbSoure.ItemIndex]);
+  lbSoure.Items.Delete(lbSoure.ItemIndex);
+end;
+
+end.

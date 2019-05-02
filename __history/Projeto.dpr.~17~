@@ -1,0 +1,14 @@
+program Projeto;
+
+uses
+  Vcl.Forms,
+  iFormPrincipal;
+
+{$R *.res}
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  iFormPrincipal.FormPrincipal_AbreTela;
+  Application.Run;
+  Application.Terminate;
+end.

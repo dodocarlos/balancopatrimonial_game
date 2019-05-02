@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2019/05/01 20:04:55.000.321,=C:\Users\dodoc\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2019/05/01 20:05:44.000.306,C:\Users\dodoc\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\dodoc\Documents\Projetos\App Contabilidade\FormPrincipal.pas</Transaction>
+    <Transaction>2019/05/01 20:05:44.000.306,C:\Users\dodoc\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\dodoc\Documents\Projetos\App Contabilidade\FormPrincipal.dfm</Transaction>
+    <Transaction>2019/05/01 20:40:01.000.437,C:\Users\dodoc\Documents\Embarcadero\Studio\Projects\Project3.dproj=C:\Users\dodoc\Documents\Projetos\App Contabilidade\Projeto.dproj</Transaction>
+    <Transaction>2019/05/01 21:17:36.000.269,=C:\Users\dodoc\Documents\Projetos\App Contabilidade\Unit1.pas</Transaction>
+    <Transaction>2019/05/01 21:17:58.000.862,C:\Users\dodoc\Documents\Projetos\App Contabilidade\ContasPlanoItem.pas=C:\Users\dodoc\Documents\Projetos\App Contabilidade\Unit1.pas</Transaction>
+    <Transaction>2019/05/01 21:18:25.000.032,=C:\Users\dodoc\Documents\Projetos\App Contabilidade\Unit1.pas</Transaction>
+    <Transaction>2019/05/01 21:18:29.000.843,C:\Users\dodoc\Documents\Projetos\App Contabilidade\PlanoContasItem.pas=C:\Users\dodoc\Documents\Projetos\App Contabilidade\Unit1.pas</Transaction>
+    <Transaction>2019/05/01 21:26:31.000.985,=C:\Users\dodoc\Documents\Projetos\App Contabilidade\Unit1.pas</Transaction>
+    <Transaction>2019/05/01 21:26:37.000.905,C:\Users\dodoc\Documents\Projetos\App Contabilidade\iFormPrincipal.pas=C:\Users\dodoc\Documents\Projetos\App Contabilidade\Unit1.pas</Transaction>
+    <Transaction>2019/05/01 22:52:53.606,=C:\Users\dodoc\Documents\Projetos\App Contabilidade\Unit1.pas</Transaction>
+    <Transaction>2019/05/01 22:52:58.668,C:\Users\dodoc\Documents\Projetos\App Contabilidade\FormInicializar.dfm=C:\Users\dodoc\Documents\Projetos\App Contabilidade\Unit1.dfm</Transaction>
+    <Transaction>2019/05/01 22:52:58.668,C:\Users\dodoc\Documents\Projetos\App Contabilidade\FormInicializar.pas=C:\Users\dodoc\Documents\Projetos\App Contabilidade\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>

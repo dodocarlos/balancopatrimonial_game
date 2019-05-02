@@ -1,0 +1,10 @@
+﻿[]
+Coordinates=101,143,91,36
+
+[lstDebitos]
+Coordinates=10,10,101,124
+Visible=True
+
+[lstCreditos]
+Coordinates=121,10,101,124
+

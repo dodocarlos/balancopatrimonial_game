@@ -1,0 +1,16 @@
+program Projeto;
+
+uses
+  Vcl.Forms,
+  iFormPrincipal,
+  FormInicializar in 'FormInicializar.pas' {Form1};
+
+{$R *.res}
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  iFormPrincipal.FormPrincipal_AbreTela;
+  Application.CreateForm(TForm1, Form1);
+  Application.Run;
+  Application.Terminate;
+end.
