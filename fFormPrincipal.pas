@@ -21,6 +21,7 @@ type
     lblTotal: TStaticText;
     lblTotalDebitos: TStaticText;
     lblTotalCreditos: TStaticText;
+    btnValidar: TButton;
   private
     { Private declarations }
   public

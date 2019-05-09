@@ -8,6 +8,11 @@ uses
   Vcl.StdCtrls;
 
 type
+  TTipoLancamento = (ttlContasAPagar, ttlContasAReceber,
+                     ttlCaixa, ttlVeiculos, ttlEstoque,
+                     ttlFornecedores, ttlSalariosAPagar,
+                     ttlCapitalSocial, ttlEmprestimos);
+
   TIFormPrincipal = class
   private
     fFrmPrincipal : TFormPrincipal;
@@ -15,10 +20,12 @@ type
     procedure plAdicionaValores;
     procedure plCriaForm;
     procedure plLigaEventos;
+    procedure plValidaDados;
 
     //Eventos
     procedure plOnDragOverListBox(Sender, Source: TObject; X, Y: Integer; State: TDragState; var Accept: Boolean);
     procedure plOnDragDropListBox(Sender, Source: TObject; X, Y: Integer);
+    procedure plOnClickBtnValidar(Sender : TObject);
 
   public
     procedure Executa;
@@ -26,6 +33,13 @@ type
 
   procedure FormPrincipal_AbreTela;
 
+const
+  STR_EXIBICAO_LANCAMENTO = '%s - R$%d';
+
+  TTipoLancamentoAtivo   = [ttlContasAReceber, ttlCaixa, ttlVeiculos, ttlEstoque];
+  TTipoLancamentoPassivo = [ttlContasAPagar, ttlFornecedores, ttlSalariosAPagar, ttlCapitalSocial, ttlEmprestimos];
+  TDescTipoLancamento: array of String = ['Contas a pagar', 'Contas a receber', 'Caixa', 'Veiculos', 'Estoque',
+                                            'Fornecedores', 'Salarios a pagar', 'Capital Social', 'Emprestimos'];
 implementation
 
 uses
@@ -56,9 +70,73 @@ begin
 end;
 
 procedure TIFormPrincipal.plAdicionaValores;
+var
+  liMaximoBalanco : Integer;
+  ldRazaoLancamento : Double;
+
+  procedure GeraValoresLancamentosAtivos;
+  var
+    loTipoLancamento  : TTipoLancamento;
+    liValorLancamento,
+    liLancamentoRestante : Integer;
+  begin
+    liLancamentoRestante := liMaximoBalanco;
+
+    for loTipoLancamento in TTipoLancamentoAtivo do
+        if   (liMaximoBalanco > 0) then
+             begin
+               liValorLancamento := RandomRange(50, Round(liMaximoBalanco * ldRazaoLancamento));
+
+               if   (liValorLancamento > liLancamentoRestante) then
+                    liValorLancamento := liLancamentoRestante;
+
+               if   not (liValorLancamento > 0) then
+                    Exit;
+
+               fFrmPrincipal.lstGeral.AddItem(Format(STR_EXIBICAO_LANCAMENTO, [TDescTipoLancamento[Ord(loTipoLancamento)], liValorLancamento]),
+                                              TPlanoContasItem.Create(ttpciAtivo, liValorLancamento));
+               liLancamentoRestante := liLancamentoRestante - liValorLancamento;
+             end;
+
+    liMaximoBalanco := liMaximoBalanco - liLancamentoRestante;
+  end;
+
+  procedure GeraValoresLancamentosPassivos;
+  var
+    loTipoLancamento  : TTipoLancamento;
+    liValorLancamento,
+    liLancamentoRestante : Integer;
+  begin
+    liLancamentoRestante := liMaximoBalanco;
+    for loTipoLancamento in (TTipoLancamentoPassivo - [ttlCapitalSocial]) do
+        if   (liMaximoBalanco > 0) then
+             begin
+               liValorLancamento := RandomRange(50, Round(liMaximoBalanco * ldRazaoLancamento));
+
+               if   (liValorLancamento > liLancamentoRestante) then
+                    liValorLancamento := liLancamentoRestante;
+
+               if   not (liValorLancamento > 0) then
+                    Exit;
+
+               fFrmPrincipal.lstGeral.AddItem(Format(STR_EXIBICAO_LANCAMENTO, [TDescTipoLancamento[Ord(loTipoLancamento)], liValorLancamento]),
+                                              TPlanoContasItem.Create(ttpciPassivo, liValorLancamento));
+               liLancamentoRestante := liLancamentoRestante - liValorLancamento;
+             end;
+
+    if   (liLancamentoRestante > 0) then
+         fFrmPrincipal.lstGeral.AddItem(Format(STR_EXIBICAO_LANCAMENTO, [TDescTipoLancamento[Ord(ttlCapitalSocial)], liLancamentoRestante]),
+                                        TPlanoContasItem.Create(ttpciPassivo, liLancamentoRestante));
+  end;
+
+
 begin
-  fFrmPrincipal.lstGeral.AddItem('Contas a pagar - R$1000', TPlanoContasItem.Create(ttpciCredito, 1000));
-  fFrmPrincipal.lstGeral.AddItem('Contas a receber - R$1000', TPlanoContasItem.Create(ttpciDebito, 1000));
+  //Tratar em outro lugar, pois podemos parametrizar por nível(talvez até usar decimais ou algo do tipo)
+  liMaximoBalanco := 30000;
+  ldRazaoLancamento := 1/(Integer(High(TTipoLancamento))/2);
+
+  GeraValoresLancamentosAtivos;
+  GeraValoresLancamentosPassivos;
 end;
 
 procedure TIFormPrincipal.plCriaForm;
@@ -80,6 +158,13 @@ begin
 
   fFrmPrincipal.lstDebitos.OnDragDrop := plOnDragDropListBox;
   fFrmPrincipal.lstDebitos.OnDragOver := plOnDragOverListBox;
+
+  fFrmPrincipal.btnValidar.OnClick := plOnClickBtnValidar;
+end;
+
+procedure TIFormPrincipal.plOnClickBtnValidar(Sender: TObject);
+begin
+  plValidaDados;
 end;
 
 procedure TIFormPrincipal.plOnDragDropListBox(Sender, Source: TObject; X,
@@ -98,20 +183,22 @@ begin
           lbSoure.Items.Delete(lbSoure.ItemIndex);
 
           case lbSender.Tag of
-            1: fFrmPrincipal.lblTotalDebitos.Caption := IntToStr(StrToInt(fFrmPrincipal.lblTotalDebitos.Caption) + loPlanoContasItem.Quantidade);
-            2: fFrmPrincipal.lblTotalCreditos.Caption := IntToStr(StrToInt(fFrmPrincipal.lblTotalCreditos.Caption) + loPlanoContasItem.Quantidade);
-          end;
+            1: begin
+                 //Soma no total de debitos
+                 fFrmPrincipal.lblTotalDebitos.Caption := IntToStr(StrToInt(fFrmPrincipal.lblTotalDebitos.Caption) + loPlanoContasItem.Quantidade);
+                 //Retira do total de creditos
+                 fFrmPrincipal.lblTotalCreditos.Caption := IntToStr(StrToInt(fFrmPrincipal.lblTotalCreditos.Caption) - loPlanoContasItem.Quantidade);
+               end;
 
-          case lbSoure.Tag of
-            1: fFrmPrincipal.lblTotalDebitos.Caption := IntToStr(StrToInt(fFrmPrincipal.lblTotalDebitos.Caption) - loPlanoContasItem.Quantidade);
-            2: fFrmPrincipal.lblTotalCreditos.Caption := IntToStr(StrToInt(fFrmPrincipal.lblTotalCreditos.Caption) - loPlanoContasItem.Quantidade);
+            2: begin
+                 //Soma no total de creditos
+                 fFrmPrincipal.lblTotalCreditos.Caption := IntToStr(StrToInt(fFrmPrincipal.lblTotalCreditos.Caption) + loPlanoContasItem.Quantidade);
+                 //Retira do total de debitos
+                 fFrmPrincipal.lblTotalDebitos.Caption := IntToStr(StrToInt(fFrmPrincipal.lblTotalDebitos.Caption) - loPlanoContasItem.Quantidade);
+               end;
           end;
 
           fFrmPrincipal.lblTotal.Caption := IntToStr(StrToInt(fFrmPrincipal.lblTotalDebitos.Caption) - StrToInt(fFrmPrincipal.lblTotalCreditos.Caption));
-          if   StrToInt(fFrmPrincipal.lblTotal.Caption) < 0 then
-               fFrmPrincipal.lblTotal.Font.Color := clRed
-          else
-               fFrmPrincipal.lblTotal.Font.Color := clBlack;
         end;
 end;
 
@@ -119,6 +206,21 @@ procedure TIFormPrincipal.plOnDragOverListBox(Sender, Source: TObject; X,
   Y: Integer; State: TDragState; var Accept: Boolean);
 begin
   Accept := Sender <> Source;
+end;
+
+procedure TIFormPrincipal.plValidaDados;
+const
+  STR_ALGO_ESTA_ERRADO = 'Ops! Algo está errado...';
+var
+  I : Integer;
+begin
+  for I := 0 to fFrmPrincipal.lstCreditos.Items.Count - 1 do
+      if   (TPlanoContasItem(fFrmPrincipal.lstCreditos.Items.Objects[I]).Tipo <> ttpciPassivo) then
+           raise Exception.Create(STR_ALGO_ESTA_ERRADO);
+      
+  for I := 0 to fFrmPrincipal.lstDebitos.Items.Count - 1 do
+      if   (TPlanoContasItem(fFrmPrincipal.lstDebitos.Items.Objects[I]).Tipo <> ttpciAtivo) then
+           raise Exception.Create(STR_ALGO_ESTA_ERRADO);   
 end;
 
 end.

@@ -3,7 +3,7 @@ unit PlanoContasItem;
 interface
 
 type
-  TTipoPlanoContasItem = (ttpciCredito, ttpciDebito);
+  TTipoPlanoContasItem = (ttpciAtivo, ttpciPassivo);
 
   TPlanoContasItem = class
   private
