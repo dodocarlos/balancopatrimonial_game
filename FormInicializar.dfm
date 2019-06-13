@@ -3,8 +3,8 @@ object Form1: TForm1
   Top = 0
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
-  ClientHeight = 106
-  ClientWidth = 255
+  ClientHeight = 158
+  ClientWidth = 271
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -17,10 +17,10 @@ object Form1: TForm1
   TextHeight = 13
   object Button1: TButton
     Left = 0
-    Top = 0
-    Width = 255
-    Height = 106
-    Align = alClient
+    Top = 111
+    Width = 271
+    Height = 47
+    Align = alBottom
     Caption = 'Iniciar'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -30,9 +30,43 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 0
     OnClick = Button1Click
-    ExplicitLeft = 152
-    ExplicitTop = 72
-    ExplicitWidth = 75
-    ExplicitHeight = 25
+  end
+  object GroupBox1: TGroupBox
+    Left = 0
+    Top = 0
+    Width = 271
+    Height = 105
+    Align = alTop
+    Caption = 'Dificuldade'
+    TabOrder = 1
+    ExplicitLeft = 72
+    ExplicitTop = 32
+    ExplicitWidth = 185
+    object RadioButton1: TRadioButton
+      Left = 16
+      Top = 24
+      Width = 113
+      Height = 17
+      Caption = 'F'#225'cil'
+      Checked = True
+      TabOrder = 0
+      TabStop = True
+    end
+    object RadioButton2: TRadioButton
+      Left = 16
+      Top = 47
+      Width = 113
+      Height = 17
+      Caption = 'M'#233'dio'
+      TabOrder = 1
+    end
+    object RadioButton3: TRadioButton
+      Left = 16
+      Top = 70
+      Width = 113
+      Height = 17
+      Caption = 'Dif'#237'cil'
+      TabOrder = 2
+    end
   end
 end

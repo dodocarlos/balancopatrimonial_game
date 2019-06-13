@@ -14,16 +14,16 @@ File_11=TSourceModule,'C:\Users\dodoc\Documents\Embarcadero\Studio\Projects\test
 File_12=TSourceModule,'C:\Users\dodoc\Documents\Embarcadero\Studio\Projects\WebModuleUnit2.pas',0,1,1,1,1,0,0,,
 
 [Modules]
-Module0=C:\Users\dodoc\Documents\Projetos\App Contabilidade\fFormPrincipal.pas
-Module1=C:\Users\dodoc\Documents\Projetos\App Contabilidade\iFormPrincipal.pas
+Module0=C:\Users\dodoc\Documents\Projetos\App Contabilidade\iFormPrincipal.pas
+Module1=C:\Users\dodoc\Documents\Projetos\App Contabilidade\fFormPrincipal.pas
 Module2=C:\Users\dodoc\Documents\Projetos\App Contabilidade\PlanoContasItem.pas
 Count=3
 EditWindowCount=1
 
-[C:\Users\dodoc\Documents\Projetos\App Contabilidade\fFormPrincipal.pas]
+[C:\Users\dodoc\Documents\Projetos\App Contabilidade\iFormPrincipal.pas]
 ModuleType=TSourceModule
 
-[C:\Users\dodoc\Documents\Projetos\App Contabilidade\iFormPrincipal.pas]
+[C:\Users\dodoc\Documents\Projetos\App Contabilidade\fFormPrincipal.pas]
 ModuleType=TSourceModule
 
 [C:\Users\dodoc\Documents\Projetos\App Contabilidade\PlanoContasItem.pas]
@@ -31,7 +31,7 @@ ModuleType=TSourceModule
 
 [EditWindow0]
 ViewCount=3
-CurrentEditView=C:\Users\dodoc\Documents\Projetos\App Contabilidade\fFormPrincipal.pas
+CurrentEditView=C:\Users\dodoc\Documents\Projetos\App Contabilidade\iFormPrincipal.pas
 View0=0
 View1=1
 View2=2
@@ -51,9 +51,7 @@ ClientHeight=8645
 DockedToMainForm=1
 BorlandEditorCodeExplorer=BorlandEditorCodeExplorer@EditWindow0
 TopPanelSize=0
-LeftPanelSize=1999
-LeftPanelClients=PropertyInspector
-LeftPanelData=0000080001000000000073200000000000000000000000000000000100000000732000001100000050726F7065727479496E73706563746F72FFFFFFFF
+LeftPanelSize=0
 RightPanelSize=0
 BottomPanelSize=0
 BottomPanelClients=MessageView
@@ -61,7 +59,7 @@ BottomPanelData=000008000100010000000F0000004D65737361676556696577466F726DAA4400
 BottomMiddlePanelSize=0
 BottomMiddlePanelClients=DockSite0
 BottomMiddelPanelData=0000080001020100000009000000446F636B5369746530551C000000000000029805000000000000FFFFFFFF
-TabDockLeftClients=CallStackWindow=0,WatchWindow=1,LocalVarsWindow=2
+TabDockLeftClients=CallStackWindow=0,WatchWindow=1,LocalVarsWindow=2,PropertyInspector=3
 TabDockBottomClients=DockSite1=0
 TabDockRightClients=DockSite2=0
 
@@ -69,7 +67,7 @@ TabDockRightClients=DockSite2=0
 CustomEditViewType=TEditView
 Module=C:\Users\dodoc\Documents\Projetos\App Contabilidade\fFormPrincipal.pas
 CursorX=4
-CursorY=30
+CursorY=31
 TopLine=1
 LeftCol=1
 Elisions=
@@ -90,9 +88,9 @@ EditViewName=C:\Users\dodoc\Documents\Projetos\App Contabilidade\PlanoContasItem
 [View2]
 CustomEditViewType=TEditView
 Module=C:\Users\dodoc\Documents\Projetos\App Contabilidade\iFormPrincipal.pas
-CursorX=75
-CursorY=26
-TopLine=12
+CursorX=91
+CursorY=222
+TopLine=202
 LeftCol=1
 Elisions=
 Bookmarks=
@@ -113,14 +111,14 @@ Create=1
 Visible=0
 Docked=1
 State=0
-Left=31
-Top=92
+Left=24
+Top=154
 Width=1896
 Height=2046
 MaxLeft=-1
 MaxTop=-1
-ClientWidth=1779
-ClientHeight=1518
+ClientWidth=1896
+ClientHeight=2046
 TBDockHeight=2046
 LRDockWidth=1896
 Dockable=1
@@ -211,7 +209,7 @@ Create=1
 Visible=0
 Docked=0
 State=0
-Left=7921
+Left=8492
 Top=4350
 Width=2079
 Height=5610
@@ -265,27 +263,27 @@ StayOnTop=0
 [PropertyInspector]
 PercentageSizes=1
 Create=1
-Visible=1
+Visible=0
 Docked=1
 State=0
-Left=0
-Top=24
+Left=8
+Top=92
 Width=1999
-Height=8008
+Height=2046
 MaxLeft=-1
 MaxTop=-1
-ClientWidth=1999
-ClientHeight=8008
+ClientWidth=1881
+ClientHeight=1518
 TBDockHeight=2046
 LRDockWidth=1999
 Dockable=1
 StayOnTop=0
-SplitPos=139
+SplitPos=140
 
 [PropInspDesignerSelection]
 ArrangeBy=Name
-SelectedItem=Align,
-ExpandedItems=BevelEdges=0,Constraints=0,Font=0,LiveBindings=0,"LiveBindings Designer=0",Margins=0,StyleElements=0,Touch=0,Anchors=0
+SelectedItem=Name,Action
+ExpandedItems=Anchors=0,BorderIcons=0,Constraints=0,Font=0,LiveBindings=0,"LiveBindings Designer=0",Margins=0,StyleElements=0,BevelEdges=0,HotTrackStyles=0,IconOptions=0,Touch=0,GlassFrame=0,HorzScrollBar=0,Padding=0
 
 [frmDesignPreview]
 PercentageSizes=1
@@ -313,7 +311,7 @@ Visible=0
 Docked=0
 State=0
 Left=0
-Top=1599
+Top=3550
 Width=1830
 Height=8401
 MaxLeft=-7
@@ -336,12 +334,12 @@ Docked=1
 State=0
 Left=0
 Top=0
-Width=2452
-Height=1301
+Width=2335
+Height=772
 MaxLeft=-1
 MaxTop=-1
-ClientWidth=2452
-ClientHeight=1301
+ClientWidth=2335
+ClientHeight=772
 TBDockHeight=3360
 LRDockWidth=3624
 Dockable=1
@@ -355,12 +353,12 @@ Docked=1
 State=0
 Left=0
 Top=0
-Width=2452
-Height=1301
+Width=2335
+Height=772
 MaxLeft=-1
 MaxTop=-1
-ClientWidth=2452
-ClientHeight=1301
+ClientWidth=2335
+ClientHeight=772
 TBDockHeight=786
 LRDockWidth=5425
 Dockable=1
@@ -377,8 +375,8 @@ Create=1
 Visible=0
 Docked=1
 State=0
-Left=16
-Top=85
+Left=24
+Top=154
 Width=1896
 Height=8848
 MaxLeft=-1
@@ -396,8 +394,8 @@ Create=1
 Visible=0
 Docked=1
 State=0
-Left=16
-Top=601
+Left=24
+Top=154
 Width=1896
 Height=1856
 MaxLeft=-1
@@ -519,13 +517,13 @@ Visible=0
 Docked=0
 State=0
 Left=2013
-Top=6789
+Top=7778
 Width=2855
 Height=3211
 MaxLeft=-7
 MaxTop=-14
-ClientWidth=2767
-ClientHeight=2696
+ClientWidth=2738
+ClientHeight=2683
 TBDockHeight=3211
 LRDockWidth=2855
 Dockable=1
@@ -596,12 +594,12 @@ Docked=1
 State=0
 Left=0
 Top=0
-Width=2452
-Height=1301
+Width=2335
+Height=772
 MaxLeft=-1
 MaxTop=-1
-ClientWidth=2452
-ClientHeight=1301
+ClientWidth=2335
+ClientHeight=772
 TBDockHeight=2087
 LRDockWidth=6391
 Dockable=1
@@ -707,13 +705,13 @@ Visible=0
 Docked=1
 State=0
 Left=8
-Top=581
+Top=730
 Width=2452
 Height=1680
 MaxLeft=-1
 MaxTop=-1
-ClientWidth=2452
-ClientHeight=1680
+ClientWidth=2335
+ClientHeight=1152
 TBDockHeight=1680
 LRDockWidth=2452
 Dockable=1
@@ -730,8 +728,8 @@ Create=1
 Visible=0
 Docked=1
 State=0
-Left=8
-Top=8
+Left=1059
+Top=115
 Width=1999
 Height=1423
 MaxLeft=-1

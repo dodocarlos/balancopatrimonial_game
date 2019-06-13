@@ -65,17 +65,6 @@ TabDockRightClients=DockSite2=0
 
 [View0]
 CustomEditViewType=TEditView
-Module=C:\Users\dodoc\Documents\Projetos\App Contabilidade\fFormPrincipal.pas
-CursorX=4
-CursorY=31
-TopLine=1
-LeftCol=1
-Elisions=
-Bookmarks=
-EditViewName=Borland.FormDesignerView
-
-[View1]
-CustomEditViewType=TEditView
 Module=C:\Users\dodoc\Documents\Projetos\App Contabilidade\PlanoContasItem.pas
 CursorX=51
 CursorY=6
@@ -85,12 +74,23 @@ Elisions=
 Bookmarks=
 EditViewName=C:\Users\dodoc\Documents\Projetos\App Contabilidade\PlanoContasItem.pas
 
+[View1]
+CustomEditViewType=TEditView
+Module=C:\Users\dodoc\Documents\Projetos\App Contabilidade\fFormPrincipal.pas
+CursorX=4
+CursorY=31
+TopLine=3
+LeftCol=1
+Elisions=
+Bookmarks=
+EditViewName=Borland.FormDesignerView
+
 [View2]
 CustomEditViewType=TEditView
 Module=C:\Users\dodoc\Documents\Projetos\App Contabilidade\iFormPrincipal.pas
-CursorX=91
-CursorY=222
-TopLine=202
+CursorX=1
+CursorY=195
+TopLine=179
 LeftCol=1
 Elisions=
 Bookmarks=
@@ -191,7 +191,7 @@ Visible=0
 Docked=1
 State=0
 Left=0
-Top=24
+Top=0
 Width=2767
 Height=1680
 MaxLeft=-1
@@ -266,19 +266,19 @@ Create=1
 Visible=0
 Docked=1
 State=0
-Left=8
-Top=92
-Width=1999
+Left=31
+Top=115
+Width=2013
 Height=2046
 MaxLeft=-1
 MaxTop=-1
-ClientWidth=1881
-ClientHeight=1518
+ClientWidth=2013
+ClientHeight=2046
 TBDockHeight=2046
-LRDockWidth=1999
+LRDockWidth=2013
 Dockable=1
 StayOnTop=0
-SplitPos=140
+SplitPos=179
 
 [PropInspDesignerSelection]
 ArrangeBy=Name
@@ -694,7 +694,7 @@ Dockable=1
 StayOnTop=0
 TabPosition=1
 ActiveTabID=ToDo List
-TabDockClients=RefactoringForm,FindReferencsForm,ToDo List,PatchForm,MetricsView,QAView
+TabDockClients=RefactoringForm,FindReferencsForm,ToDo List,QAView,MetricsView,PatchForm
 
 [DockSite1]
 HostDockSite=BottomDockTabSet
@@ -728,8 +728,8 @@ Create=1
 Visible=0
 Docked=1
 State=0
-Left=1059
-Top=115
+Left=8
+Top=8
 Width=1999
 Height=1423
 MaxLeft=-1
@@ -742,5 +742,5 @@ Dockable=1
 StayOnTop=0
 TabPosition=1
 ActiveTabID=ProjectManager
-TabDockClients=ProjectManager,ModelViewTool,DataExplorerContainer,frmDesignPreview
+TabDockClients=ProjectManager,frmDesignPreview,DataExplorerContainer,ModelViewTool
 

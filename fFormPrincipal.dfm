@@ -32,7 +32,6 @@ object FormPrincipal: TFormPrincipal
     ItemHeight = 17
     ParentFont = False
     TabOrder = 1
-    ExplicitHeight = 268
   end
   object lstDebitos: TListBox
     Tag = 1
@@ -50,7 +49,6 @@ object FormPrincipal: TFormPrincipal
     ItemHeight = 17
     ParentFont = False
     TabOrder = 2
-    ExplicitHeight = 268
   end
   object lstGeral: TListBox
     Left = 0
@@ -76,7 +74,6 @@ object FormPrincipal: TFormPrincipal
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 3
-    ExplicitTop = 413
     object Label1: TLabel
       Left = 104
       Top = 31
@@ -147,11 +144,11 @@ object FormPrincipal: TFormPrincipal
       TabOrder = 2
     end
     object btnValidar: TButton
-      Left = 304
+      Left = 305
       Top = 50
       Width = 75
       Height = 25
-      Caption = 'Validar'
+      Caption = 'Conferir'
       TabOrder = 3
     end
   end
@@ -176,6 +173,5 @@ object FormPrincipal: TFormPrincipal
     Color = clBlack
     ParentBackground = False
     TabOrder = 5
-    ExplicitHeight = 268
   end
 end
