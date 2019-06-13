@@ -13,7 +13,8 @@ type
                      ttlFornecedores, ttlSalariosAPagar,
                      ttlCapitalSocial, ttlEmprestimos,
                      ttlBancos, ttlAlugueis, ttlImpostosAPagar,
-                     ttlImoveis, ttlObrigacoes, ttlMercadorias);
+                     ttlImoveis, ttlObrigacoes, ttlMercadorias,
+                     ttlBoletos);
 
   TDificuldade = (tdFacil, tdMedio, tdDificil);
 
@@ -43,10 +44,11 @@ const
 
   TTipoLancamentoAtivo   = [ttlContasAReceber, ttlCaixa, ttlVeiculos, ttlEstoque, ttlBancos, ttlImoveis, ttlMercadorias];
   TTipoLancamentoPassivo = [ttlContasAPagar, ttlFornecedores, ttlSalariosAPagar, ttlCapitalSocial, ttlEmprestimos, ttlImpostosAPagar,
-                            ttlObrigacoes, ttlAlugueis];
+                            ttlObrigacoes, ttlAlugueis, ttlBoletos];
   TDescTipoLancamento: array of String = ['Contas a pagar', 'Contas a receber', 'Caixa', 'Veiculos', 'Estoque',
                                             'Fornecedores', 'Salarios a pagar', 'Capital Social', 'Emprestimos',
-                                            'Bancos', 'Alugueis', 'Impostos a pagar', 'Imóveis', 'Obrigações', 'Mercadorias'];
+                                            'Bancos', 'Alugueis', 'Impostos a pagar', 'Imóveis', 'Obrigações',
+                                            'Mercadorias', 'Boletos'];
 implementation
 
 uses
@@ -153,7 +155,11 @@ begin
    tdDificil: liMaximoBalanco := 300000;
   end;
 
-  ldRazaoLancamento := 1/(Ord(fDificuldade)+1);
+  case fDificuldade of
+   tdFacil: ldRazaoLancamento := 0.8;
+   tdMedio: ldRazaoLancamento := 0.45;
+   tdDificil: ldRazaoLancamento := 0.25;
+  end;
 
   GeraValoresLancamentosAtivos;
   GeraValoresLancamentosPassivos;
@@ -234,6 +240,10 @@ const
 var
   I : Integer;
 begin
+  if   (fFrmPrincipal.lstCreditos.Items.Count = 0)
+  or   (fFrmPrincipal.lstDebitos.Items.Count = 0) then
+       raise Exception.Create(STR_ALGO_ESTA_ERRADO);
+
   for I := 0 to fFrmPrincipal.lstCreditos.Items.Count - 1 do
       if   (TPlanoContasItem(fFrmPrincipal.lstCreditos.Items.Objects[I]).Tipo <> ttpciPassivo) then
            raise Exception.Create(STR_ALGO_ESTA_ERRADO);

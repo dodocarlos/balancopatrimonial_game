@@ -11,7 +11,10 @@ type
   TTipoLancamento = (ttlContasAPagar, ttlContasAReceber,
                      ttlCaixa, ttlVeiculos, ttlEstoque,
                      ttlFornecedores, ttlSalariosAPagar,
-                     ttlCapitalSocial, ttlEmprestimos);
+                     ttlCapitalSocial, ttlEmprestimos,
+                     ttlBancos, ttlAlugueis, ttlImpostosAPagar,
+                     ttlImoveis, ttlObrigacoes, ttlMercadorias,
+                     ttlBoletos);
 
   TDificuldade = (tdFacil, tdMedio, tdDificil);
 
@@ -39,10 +42,13 @@ type
 const
   STR_EXIBICAO_LANCAMENTO = '%s - R$%d';
 
-  TTipoLancamentoAtivo   = [ttlContasAReceber, ttlCaixa, ttlVeiculos, ttlEstoque];
-  TTipoLancamentoPassivo = [ttlContasAPagar, ttlFornecedores, ttlSalariosAPagar, ttlCapitalSocial, ttlEmprestimos];
+  TTipoLancamentoAtivo   = [ttlContasAReceber, ttlCaixa, ttlVeiculos, ttlEstoque, ttlBancos, ttlImoveis, ttlMercadorias];
+  TTipoLancamentoPassivo = [ttlContasAPagar, ttlFornecedores, ttlSalariosAPagar, ttlCapitalSocial, ttlEmprestimos, ttlImpostosAPagar,
+                            ttlObrigacoes, ttlAlugueis, ttlBoletos];
   TDescTipoLancamento: array of String = ['Contas a pagar', 'Contas a receber', 'Caixa', 'Veiculos', 'Estoque',
-                                            'Fornecedores', 'Salarios a pagar', 'Capital Social', 'Emprestimos'];
+                                            'Fornecedores', 'Salarios a pagar', 'Capital Social', 'Emprestimos',
+                                            'Bancos', 'Alugueis', 'Impostos a pagar', 'Imóveis', 'Obrigações',
+                                            'Mercadorias', 'Boletos'];
 implementation
 
 uses
@@ -139,7 +145,7 @@ var
     I: Integer;
   begin
     for I := 0 to fFrmPrincipal.lstGeral.Count - 1 do
-     
+        fFrmPrincipal.lstGeral.Items.Exchange(I, Random(fFrmPrincipal.lstGeral.Count));
   end;
 
 begin
@@ -149,7 +155,7 @@ begin
    tdDificil: liMaximoBalanco := 300000;
   end;
 
-  ldRazaoLancamento := 1/(Integer(High(TTipoLancamento))/2);
+  ldRazaoLancamento := 1/(Ord(fDificuldade)+1);
 
   GeraValoresLancamentosAtivos;
   GeraValoresLancamentosPassivos;
@@ -230,6 +236,10 @@ const
 var
   I : Integer;
 begin
+  if   (fFrmPrincipal.lstCreditos.Items.Count = 0)
+  or   (fFrmPrincipal.lstDebitos.Items.Count = 0) then
+       raise Exception.Create(STR_ALGO_ESTA_ERRADO);
+
   for I := 0 to fFrmPrincipal.lstCreditos.Items.Count - 1 do
       if   (TPlanoContasItem(fFrmPrincipal.lstCreditos.Items.Objects[I]).Tipo <> ttpciPassivo) then
            raise Exception.Create(STR_ALGO_ESTA_ERRADO);

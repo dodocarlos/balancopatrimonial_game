@@ -1,27 +1,32 @@
 ﻿[Closed Files]
-File_0=TSourceModule,'C:\Users\dodoc\Documents\Projetos\App Contabilidade\FormInicializar.pas',0,1,10,34,24,0,0,,
-File_1=TSourceModule,'c:\program files (x86)\embarcadero\studio\20.0\SOURCE\RTL\SYS\System.pas',0,1,18808,1,18831,0,0,,
-File_2=TSourceModule,'c:\program files (x86)\embarcadero\studio\20.0\SOURCE\VCL\Vcl.Forms.pas',0,1,10836,1,10851,0,0,{{1755,4}
-File_3=TSourceModule,'c:\program files (x86)\embarcadero\studio\20.0\source\fmx\FMX.Colors.pas',0,1,1,1,1,0,0,,
-File_4=TSourceModule,'c:\program files (x86)\embarcadero\studio\20.0\SOURCE\VCL\Vcl.StdCtrls.pas',0,1,1361,1,1376,0,0,{{1657,4}
-File_5=TSourceModule,'c:\program files (x86)\embarcadero\studio\20.0\SOURCE\VCL\Vcl.Controls.pas',0,1,1117,1,1141,0,0,,
-File_6=TSourceModule,'C:\Users\dodoc\Documents\Projetos\App Contabilidade\FormPrincipal.pas',0,1,1,28,11,0,0,,
-File_7=TSourceModule,'C:\Users\dodoc\Documents\Projetos\App Contabilidade\ContasPlanoItem.pas',0,1,1,1,1,0,0,,
-File_8=TSourceModule,'c:\program files (x86)\embarcadero\studio\20.0\source\rtl\common\System.Classes.pas',0,1,6588,3,6590,0,0,,
-File_9=TSourceModule,'C:\Users\dodoc\Documents\Embarcadero\Studio\Projects\FormUnit2.pas',0,1,1,1,1,0,0,,
-File_10=TSourceModule,'C:\Users\dodoc\Documents\Embarcadero\Studio\Projects\testeImpl.pas',0,1,3,1,1,0,0,,
-File_11=TSourceModule,'C:\Users\dodoc\Documents\Embarcadero\Studio\Projects\testeIntf.pas',0,1,1,1,1,0,0,,
-File_12=TSourceModule,'C:\Users\dodoc\Documents\Embarcadero\Studio\Projects\WebModuleUnit2.pas',0,1,1,1,1,0,0,,
+File_0=TSourceModule,'c:\program files (x86)\embarcadero\studio\20.0\source\fmx\FMX.Dialogs.pas',0,1,380,1,383,0,0,,
+File_1=TSourceModule,'C:\Users\dodoc\Documents\Projetos\App Contabilidade\FormInicializar.pas',0,1,26,39,37,0,0,,
+File_2=TSourceModule,'c:\program files (x86)\embarcadero\studio\20.0\SOURCE\RTL\SYS\System.pas',0,1,18808,1,18831,0,0,,
+File_3=TSourceModule,'c:\program files (x86)\embarcadero\studio\20.0\SOURCE\VCL\Vcl.Forms.pas',0,1,10836,1,10851,0,0,{{1755,4}
+File_4=TSourceModule,'c:\program files (x86)\embarcadero\studio\20.0\source\fmx\FMX.Colors.pas',0,1,1,1,1,0,0,,
+File_5=TSourceModule,'c:\program files (x86)\embarcadero\studio\20.0\SOURCE\VCL\Vcl.StdCtrls.pas',0,1,1361,1,1376,0,0,{{1657,4}
+File_6=TSourceModule,'c:\program files (x86)\embarcadero\studio\20.0\SOURCE\VCL\Vcl.Controls.pas',0,1,1117,1,1141,0,0,,
+File_7=TSourceModule,'C:\Users\dodoc\Documents\Projetos\App Contabilidade\FormPrincipal.pas',0,1,1,28,11,0,0,,
+File_8=TSourceModule,'C:\Users\dodoc\Documents\Projetos\App Contabilidade\ContasPlanoItem.pas',0,1,1,1,1,0,0,,
+File_9=TSourceModule,'c:\program files (x86)\embarcadero\studio\20.0\source\rtl\common\System.Classes.pas',0,1,6588,3,6590,0,0,,
+File_10=TSourceModule,'C:\Users\dodoc\Documents\Embarcadero\Studio\Projects\FormUnit2.pas',0,1,1,1,1,0,0,,
+File_11=TSourceModule,'C:\Users\dodoc\Documents\Embarcadero\Studio\Projects\testeImpl.pas',0,1,3,1,1,0,0,,
+File_12=TSourceModule,'C:\Users\dodoc\Documents\Embarcadero\Studio\Projects\testeIntf.pas',0,1,1,1,1,0,0,,
+File_13=TSourceModule,'C:\Users\dodoc\Documents\Embarcadero\Studio\Projects\WebModuleUnit2.pas',0,1,1,1,1,0,0,,
 
 [Modules]
 Module0=C:\Users\dodoc\Documents\Projetos\App Contabilidade\iFormPrincipal.pas
-Module1=C:\Users\dodoc\Documents\Projetos\App Contabilidade\fFormPrincipal.pas
-Module2=C:\Users\dodoc\Documents\Projetos\App Contabilidade\PlanoContasItem.pas
-Count=3
+Module1=C:\Users\dodoc\Documents\Projetos\App Contabilidade\Projeto.dproj
+Module2=C:\Users\dodoc\Documents\Projetos\App Contabilidade\fFormPrincipal.pas
+Module3=C:\Users\dodoc\Documents\Projetos\App Contabilidade\PlanoContasItem.pas
+Count=4
 EditWindowCount=1
 
 [C:\Users\dodoc\Documents\Projetos\App Contabilidade\iFormPrincipal.pas]
 ModuleType=TSourceModule
+
+[C:\Users\dodoc\Documents\Projetos\App Contabilidade\Projeto.dproj]
+ModuleType=TBaseProject
 
 [C:\Users\dodoc\Documents\Projetos\App Contabilidade\fFormPrincipal.pas]
 ModuleType=TSourceModule
@@ -30,11 +35,12 @@ ModuleType=TSourceModule
 ModuleType=TSourceModule
 
 [EditWindow0]
-ViewCount=3
+ViewCount=4
 CurrentEditView=C:\Users\dodoc\Documents\Projetos\App Contabilidade\iFormPrincipal.pas
 View0=0
 View1=1
 View2=2
+View3=3
 PercentageSizes=1
 Create=1
 Visible=1
@@ -54,14 +60,12 @@ TopPanelSize=0
 LeftPanelSize=0
 RightPanelSize=0
 BottomPanelSize=0
-BottomPanelClients=MessageView
-BottomPanelData=000008000100010000000F0000004D65737361676556696577466F726DAA44000000000000008707000000000000FFFFFFFF
 BottomMiddlePanelSize=0
 BottomMiddlePanelClients=DockSite0
 BottomMiddelPanelData=0000080001020100000009000000446F636B5369746530551C000000000000029805000000000000FFFFFFFF
 TabDockLeftClients=CallStackWindow=0,WatchWindow=1,LocalVarsWindow=2,PropertyInspector=3
-TabDockBottomClients=DockSite1=0
-TabDockRightClients=DockSite2=0
+TabDockBottomClients=DockSite1=-1,MessageView=0
+TabDockRightClients=DockSite2=0,ToolForm=1
 
 [View0]
 CustomEditViewType=TEditView
@@ -88,13 +92,24 @@ EditViewName=Borland.FormDesignerView
 [View2]
 CustomEditViewType=TEditView
 Module=C:\Users\dodoc\Documents\Projetos\App Contabilidade\iFormPrincipal.pas
-CursorX=1
-CursorY=195
-TopLine=179
+CursorX=49
+CursorY=158
+TopLine=143
 LeftCol=1
 Elisions=
 Bookmarks=
 EditViewName=C:\Users\dodoc\Documents\Projetos\App Contabilidade\iFormPrincipal.pas
+
+[View3]
+CustomEditViewType=TEditView
+Module=C:\Users\dodoc\Documents\Projetos\App Contabilidade\Projeto.dpr
+CursorX=1
+CursorY=8
+TopLine=1
+LeftCol=1
+Elisions=
+Bookmarks=
+EditViewName=C:\Users\dodoc\Documents\Projetos\App Contabilidade\Projeto.dpr
 
 [UndockedDesigner]
 Count=0
@@ -111,8 +126,8 @@ Create=1
 Visible=0
 Docked=1
 State=0
-Left=24
-Top=154
+Left=0
+Top=0
 Width=1896
 Height=2046
 MaxLeft=-1
@@ -125,7 +140,8 @@ Dockable=1
 StayOnTop=0
 
 [Breakpoints]
-Count=0
+Count=1
+Breakpoint0='C:\Users\dodoc\Documents\Projetos\App Contabilidade\iFormPrincipal.pas',158,'',0,1,'',1,0,0,'',1,'','','',0,''
 
 [EmbarcaderoWin32Debugger_AddressBreakpoints]
 Count=0
@@ -173,11 +189,11 @@ Docked=1
 State=0
 Left=0
 Top=0
-Width=1999
+Width=2028
 Height=1423
 MaxLeft=-1
 MaxTop=-1
-ClientWidth=1999
+ClientWidth=2028
 ClientHeight=1423
 TBDockHeight=7154
 LRDockWidth=1779
@@ -191,14 +207,14 @@ Visible=0
 Docked=1
 State=0
 Left=0
-Top=0
-Width=2767
-Height=1680
+Top=26
+Width=9883
+Height=1274
 MaxLeft=-1
 MaxTop=-1
-ClientWidth=2767
-ClientHeight=1680
-TBDockHeight=1680
+ClientWidth=9883
+ClientHeight=1274
+TBDockHeight=1274
 LRDockWidth=2767
 Dockable=1
 StayOnTop=0
@@ -207,18 +223,18 @@ StayOnTop=0
 PercentageSizes=1
 Create=1
 Visible=0
-Docked=0
+Docked=1
 State=0
-Left=8492
-Top=4350
-Width=2079
-Height=5610
-MaxLeft=-7
-MaxTop=-14
-ClientWidth=1991
-ClientHeight=5095
+Left=0
+Top=0
+Width=1735
+Height=7154
+MaxLeft=-1
+MaxTop=-1
+ClientWidth=1735
+ClientHeight=7154
 TBDockHeight=7154
-LRDockWidth=1691
+LRDockWidth=1735
 Dockable=1
 StayOnTop=0
 
@@ -266,24 +282,19 @@ Create=1
 Visible=0
 Docked=1
 State=0
-Left=31
-Top=115
-Width=2013
+Left=0
+Top=0
+Width=2145
 Height=2046
 MaxLeft=-1
 MaxTop=-1
-ClientWidth=2013
+ClientWidth=2145
 ClientHeight=2046
 TBDockHeight=2046
-LRDockWidth=2013
+LRDockWidth=2145
 Dockable=1
 StayOnTop=0
-SplitPos=179
-
-[PropInspDesignerSelection]
-ArrangeBy=Name
-SelectedItem=Name,Action
-ExpandedItems=Anchors=0,BorderIcons=0,Constraints=0,Font=0,LiveBindings=0,"LiveBindings Designer=0",Margins=0,StyleElements=0,BevelEdges=0,HotTrackStyles=0,IconOptions=0,Touch=0,GlassFrame=0,HorzScrollBar=0,Padding=0
+SplitPos=160
 
 [frmDesignPreview]
 PercentageSizes=1
@@ -334,12 +345,12 @@ Docked=1
 State=0
 Left=0
 Top=0
-Width=2335
-Height=772
+Width=2452
+Height=7602
 MaxLeft=-1
 MaxTop=-1
-ClientWidth=2335
-ClientHeight=772
+ClientWidth=2452
+ClientHeight=7602
 TBDockHeight=3360
 LRDockWidth=3624
 Dockable=1
@@ -353,12 +364,12 @@ Docked=1
 State=0
 Left=0
 Top=0
-Width=2335
-Height=772
+Width=2452
+Height=7602
 MaxLeft=-1
 MaxTop=-1
-ClientWidth=2335
-ClientHeight=772
+ClientWidth=2452
+ClientHeight=7602
 TBDockHeight=786
 LRDockWidth=5425
 Dockable=1
@@ -366,7 +377,7 @@ StayOnTop=0
 Column0Width=145
 Column1Width=100
 Column2Width=115
-Column3Width=250
+Column3Width=50
 Column4Width=10
 
 [LocalVarsWindow]
@@ -375,8 +386,8 @@ Create=1
 Visible=0
 Docked=1
 State=0
-Left=24
-Top=154
+Left=0
+Top=0
 Width=1896
 Height=8848
 MaxLeft=-1
@@ -394,8 +405,8 @@ Create=1
 Visible=0
 Docked=1
 State=0
-Left=24
-Top=154
+Left=0
+Top=0
 Width=1896
 Height=1856
 MaxLeft=-1
@@ -522,8 +533,8 @@ Width=2855
 Height=3211
 MaxLeft=-7
 MaxTop=-14
-ClientWidth=2738
-ClientHeight=2683
+ClientWidth=2767
+ClientHeight=2696
 TBDockHeight=3211
 LRDockWidth=2855
 Dockable=1
@@ -554,8 +565,8 @@ Create=1
 Visible=0
 Docked=1
 State=0
-Left=0
-Top=0
+Left=-45
+Top=-157
 Width=3565
 Height=4837
 MaxLeft=-1
@@ -573,8 +584,8 @@ Create=1
 Visible=0
 Docked=1
 State=0
-Left=0
-Top=0
+Left=-45
+Top=-157
 Width=3565
 Height=4837
 MaxLeft=-1
@@ -594,12 +605,12 @@ Docked=1
 State=0
 Left=0
 Top=0
-Width=2335
-Height=772
+Width=2452
+Height=7602
 MaxLeft=-1
 MaxTop=-1
-ClientWidth=2335
-ClientHeight=772
+ClientWidth=2452
+ClientHeight=7602
 TBDockHeight=2087
 LRDockWidth=6391
 Dockable=1
@@ -637,8 +648,8 @@ Create=1
 Visible=0
 Docked=1
 State=0
-Left=0
-Top=0
+Left=-8
+Top=-8
 Width=5300
 Height=4878
 MaxLeft=-1
@@ -705,19 +716,19 @@ Visible=0
 Docked=1
 State=0
 Left=8
-Top=730
+Top=8
 Width=2452
-Height=1680
+Height=7981
 MaxLeft=-1
 MaxTop=-1
-ClientWidth=2335
-ClientHeight=1152
-TBDockHeight=1680
+ClientWidth=2452
+ClientHeight=7981
+TBDockHeight=7981
 LRDockWidth=2452
 Dockable=1
 StayOnTop=0
 TabPosition=1
-ActiveTabID=DebugLogView
+ActiveTabID=ThreadStatusWindow
 TabDockClients=DebugLogView,BreakpointWindow,ThreadStatusWindow
 
 [DockSite2]
@@ -730,17 +741,17 @@ Docked=1
 State=0
 Left=8
 Top=8
-Width=1999
+Width=2028
 Height=1423
 MaxLeft=-1
 MaxTop=-1
-ClientWidth=1999
+ClientWidth=2028
 ClientHeight=1423
 TBDockHeight=1423
-LRDockWidth=1999
+LRDockWidth=2028
 Dockable=1
 StayOnTop=0
 TabPosition=1
 ActiveTabID=ProjectManager
-TabDockClients=ProjectManager,frmDesignPreview,DataExplorerContainer,ModelViewTool
+TabDockClients=ProjectManager,ModelViewTool,DataExplorerContainer,frmDesignPreview
 
